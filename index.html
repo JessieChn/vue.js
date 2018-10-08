@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>smiledemo</title>
+    <style>
+      .test{ 
+        width: 20rem;
+        height: 10rem;
+        background-color: bisque;
+        text-align: center;
+      }
+      .hello{
+        color: red;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <div class="test">
+      <p class="hello">Hello Jessie</p>
+    </div>
+    <script>
+      //获得了屏幕的大小 这个clientWidth有些浏览器获取不到，需要换一个语句
+      let htmlwidth = document.documentElement.clientWidth || document.body.clientWidth;
+      //获得最外层的dom元素 
+      let htmlDom  = document.getElementsByTagName('html')[0];
+      //给dom元素设置font-size
+      htmlDom.style.fontSize = htmlwidth/20 + 'px';
+      console.log(htmlwidth);
+    </script>
+  </body>
+</html>
